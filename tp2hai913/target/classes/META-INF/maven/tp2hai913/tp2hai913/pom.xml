@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tp2hai913</groupId>
+  <artifactId>tp2hai913</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>tp2hai913</name>
+  <url>http://maven.apache.org</url>
+
+   <properties>
+ 
+<maven.compiler.source>8</maven.compiler.source>
+<maven.compiler.target>8</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+
+
+
+  <dependencies>
+<dependency>
+<groupId>org.eclipse.tycho</groupId>
+<artifactId>org.eclipse.jdt.core</artifactId>
+<version>3.9.1.v20130905-0837</version>
+</dependency>
+<dependency>
+<groupId>org.eclipse.core</groupId>
+<artifactId>runtime</artifactId>
+<version>3.9.100-v20131218-1515</version>
+</dependency>
+<dependency>
+<groupId>org.eclipse.birt.runtime</groupId>
+<artifactId>org.eclipse.core.resources</artifactId>
+<version>3.8.101.v20130717-0806</version>
+</dependency>
+<dependency>
+<groupId>commons-io</groupId>
+<artifactId>commons-io</artifactId>
+<version>2.11.0</version>
+</dependency>
+ 	
+
+
+
+
+<!-- https://mvnrepository.com/artifact/org.tinyjee.jgraphx/jgraphx -->
+<dependency>
+    <groupId>org.tinyjee.jgraphx</groupId>
+    <artifactId>jgraphx</artifactId>
+    <version>3.4.1.3</version>
+</dependency>
+
+
+
+
+
+    
+ </dependencies>
+
+  
+ <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <mainClass>tp1hai913.tp1hai913.ASTParse</mainClass>
+        </configuration>
+      </plugin>
+      
+      
+      
+      <plugin>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>0.0.5</version> <!-- Vérifie si une version plus récente est disponible -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                </execution>
+            </executions>
+           
+        </plugin>
+      
+      
+      
+    </plugins>
+    
+    
+    
+    
+  </build>
+  
+
+
+
+<repositories>
+    <!-- Dépôt Eclipse pour les dépendances JDT -->
+    <repository>
+      <id>eclipse-releases</id>
+      <url>https://repo.eclipse.org/content/groups/releases/</url>
+    </repository>
+    
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+
+<repository>
+        <id>oss.sonatype.org</id>
+        <url>https://oss.sonatype.org/content/repositories/releases/</url>
+    </repository>
+    
+  </repositories>
+  
+
+
+
+  
+ 
+</project>
